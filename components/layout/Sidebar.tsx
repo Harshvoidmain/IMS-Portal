@@ -45,12 +45,18 @@ const NAV_ITEMS: NavItem[] = [
     label: "Dashboard",
     href: "/dashboard",
     icon: LayoutDashboard,
-    roles: ["superadmin", "admin", "hod", "faculty", "staff", "student", "deptadmin"],
+    roles: ["superadmin", "admin", "hod", "faculty", "staff", "student"],
   },
   {
-    label: "Dept Dashboard",
+    label: "Dashboard",
     href: "/dept-admin",
-    icon: Building2,
+    icon: LayoutDashboard,
+    roles: ["deptadmin"],
+  },
+  {
+    label: "Activity Coordination",
+    href: "/dept-admin/activity-coordination",
+    icon: ClipboardList,
     roles: ["deptadmin"],
   },
   {

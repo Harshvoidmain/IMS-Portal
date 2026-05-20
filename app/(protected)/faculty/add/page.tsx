@@ -20,7 +20,7 @@ import { formatFacultyId } from "@/lib/utils/departmentId";
 const STEPS = ["Personal Info", "Academic Info", "Account Setup"];
 
 const DESIGNATIONS = [
-  "Professor", "Associate Professor", "Assistant Professor",
+  "Principal", "Professor", "Associate Professor", "Assistant Professor",
   "Lecturer", "Senior Lecturer", "Professor & Head",
   "Associate Professor & Head", "Assistant Professor & Head",
   "Visiting Faculty", "Adjunct Faculty",
@@ -182,6 +182,11 @@ export default function AddFacultyPage() {
               <label className="block text-sm font-medium mb-1.5">Department <span className="text-error">*</span></label>
               <select className="w-full h-9 px-3 rounded-md border border-border bg-white dark:bg-gray-900 text-sm" {...academicForm.register("departmentId")}>
                 <option value="">Select department…</option>
+                <option value="Computer">Computer</option>
+                <option value="Mechanical">Mechanical</option>
+                <option value="Electrical">Electrical</option>
+                <option value="EXTC">EXTC</option>
+                <option value="Computer Science">Computer Science</option>
                 {departments.map((d) => (
                   <option key={d.id} value={d.departmentId}>[{d.departmentId}] {d.name}</option>
                 ))}

@@ -13,6 +13,7 @@ export const facultyPersonalInfoSchema = z.object({
 export const facultyAcademicInfoSchema = z.object({
   departmentId: z.string().min(1, "Department is required"),
   designation: z.enum([
+    "Principal",
     "Professor",
     "Associate Professor",
     "Assistant Professor",
@@ -28,7 +29,7 @@ export const facultyAcademicInfoSchema = z.object({
   joiningDate: z.string().min(1, "Joining date is required"),
   experience: z.number().min(0).optional(),
   specialization: z.array(z.string()).optional(),
-  qualification: z.array(z.string()).min(1, "At least one qualification is required"),
+  qualification: z.array(z.string()).optional(),
 });
 
 export const facultyAccountSchema = z.object({
